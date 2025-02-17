@@ -15,9 +15,9 @@ const fetchData = async (domain: string) => {
           'tenant.domain': {
             equals: domain,
           },
-          'slug': {
-            equals: 'home-new'
-          }
+          // 'slug': {
+          //   equals: 'home-new'
+          // }
         },
       ],
     },
