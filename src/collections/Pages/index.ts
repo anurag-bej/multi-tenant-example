@@ -6,10 +6,10 @@ import { superAdminOrTenantAdminAccess } from '@/collections/Pages/access/superA
 export const Pages: CollectionConfig = {
   slug: 'pages',
   access: {
-    create: superAdminOrTenantAdminAccess,
-    delete: superAdminOrTenantAdminAccess,
+    create: () => true,
+    delete: () => true,
     read: () => true,
-    update: superAdminOrTenantAdminAccess,
+    update: () => true,
   },
   admin: {
     useAsTitle: 'title',
@@ -29,10 +29,10 @@ export const Pages: CollectionConfig = {
       index: true,
     },
     // {
-    //   name: 'tenant',
+    //   name: 'tenantnew',
     //   type: 'relationship',
     //   relationTo: 'tenants', // Assuming you have a 'tenants' collection
-    //   required: true,
+    //   required: false,
     // },
   ],
 }
