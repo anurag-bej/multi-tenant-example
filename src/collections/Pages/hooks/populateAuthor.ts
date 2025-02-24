@@ -7,7 +7,7 @@ import { User } from 'src/payload-types'
 // So we use an alternative `populatedAuthors` field to populate the user data, hidden from the admin UI
 export const populateAuthor: CollectionAfterReadHook = async ({ doc, req, req: { payload } }) => {
   if (doc?.authors) {
-    const authorDocs: User[] = []
+    const authorDocs: any = []
 
     for (const author of doc.authors) {
       const authorDoc = await payload.findByID({
@@ -22,7 +22,7 @@ export const populateAuthor: CollectionAfterReadHook = async ({ doc, req, req: {
       }
     }
 
-    doc.populatedAuthors = authorDocs.map((authorDoc) => ({
+    doc.populatedAuthors = authorDocs.map((authorDoc:any) => ({
       id: authorDoc.id,
       name: authorDoc.name,
     }))

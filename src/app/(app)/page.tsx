@@ -2,7 +2,7 @@ import { headers } from 'next/headers'
 import { getPayload } from 'payload'
 import React from 'react'
 import configPromise from '@payload-config'
-import { RenderBlocks } from '../blocks/RenderBlocks'
+import { RenderBlocks } from '@/blocks/RenderBlocks'
 
 const fetchData = async (domain: string) => {
   const payload = await getPayload({ config: configPromise })

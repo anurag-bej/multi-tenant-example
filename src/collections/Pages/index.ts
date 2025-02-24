@@ -5,7 +5,7 @@ import { superAdminOrTenantAdminAccess } from '@/collections/Pages/access/superA
 import { hero } from '@/heros/config'
 import { MetaDescriptionField, MetaImageField, MetaTitleField, OverviewField, PreviewField } from '@payloadcms/plugin-seo/fields'
 import { slugField } from '@/fields/slug'
-import { AboutGrowthBlock } from '@/app/blocks/AboutGrowth/config'
+import { AboutGrowthBlock } from '@/blocks/AboutGrowth/config'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
