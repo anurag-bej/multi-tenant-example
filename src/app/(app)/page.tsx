@@ -40,7 +40,7 @@ const Page = async () => {
     console.log('domainValue ',domainValue);
   const tenantData = await fetchData(domainValue)
   const page = tenantData?.docs[0];
-  const { hero, layout } = page
+  const { layout } = page
   console.log('tenantData ',tenantData);
   return (
     <div>

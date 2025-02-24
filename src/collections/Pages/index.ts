@@ -2,7 +2,7 @@ import type { CollectionConfig } from 'payload'
 
 import { ensureUniqueSlug } from './hooks/ensureUniqueSlug'
 import { superAdminOrTenantAdminAccess } from '@/collections/Pages/access/superAdminOrTenantAdmin'
-import { hero } from '@/heros/config'
+
 import { MetaDescriptionField, MetaImageField, MetaTitleField, OverviewField, PreviewField } from '@payloadcms/plugin-seo/fields'
 import { slugField } from '@/fields/slug'
 import { AboutGrowthBlock } from '@/blocks/AboutGrowth/config'
@@ -34,10 +34,6 @@ export const Pages: CollectionConfig = {
     {
       type: 'tabs',
       tabs: [
-        {
-          fields: [hero],
-          label: 'Hero',
-        },
         {
           fields: [
             {
