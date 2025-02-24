@@ -1,0 +1,157 @@
+@import "./_variables.scss";
+@import "./_guidline.scss";
+@import "./_guidlineColor.scss";
+@import "./_guidlineMedia.scss";
+
+
+.planTableMainSection {
+    padding: 130px 0 118px;
+    position: relative;
+    background-color: $primary_light;
+
+    .planTablewrapper {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        width: 100%;
+
+        .boxTitleS {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 27px 10px;
+            border-radius: 16px;
+            background-color: $primary_theme;
+            color: $neutrals_white;
+            @include headFour;
+            font-weight: 600;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+            text-align: center;
+            
+            @include mini-screen{
+                height: 118px;
+            }
+            @include tab-max{
+                height: 110px;
+            }
+
+            &.blankB {
+                visibility: hidden;
+            }
+        }
+
+        .sectionTitleCol {
+            max-width: 328px;
+            width: 100%;
+
+            .PlansCol {
+                background-color: $primary_theme;
+                display: flex;
+                flex-direction: column;
+                padding: 18px 10px;
+                border-radius: 16px;
+
+                .Plansline {
+                    color: $neutrals_white;
+                    font-size: 20px;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 10px;
+                    padding: 10px;
+                    height: 90px;
+                }
+            }
+        }
+
+        .sectionBoxCol {
+            max-width: 239px;
+            width: 100%;
+
+            .PlansCol {
+                background-color: $neutrals_white;
+                display: flex;
+                flex-direction: column;
+                padding: 18px 10px;
+                border-radius: 16px;
+
+                .Plansline {
+                    color: $neutrals_black;
+                    font-size: 20px;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    gap: 10px;
+                    padding: 10px 0;
+                    height: 90px;
+                }
+            }
+        }
+
+        &.MobileWr {
+            display: block;
+
+            .tableHeader {
+                border-radius: 16px;
+                background-color: $primary_theme;
+                padding: 27px;
+                display: flex !important;
+                justify-content: center;
+                align-items: center;
+                // box-shadow: 0px 11px 22px 0px rgba(0, 0, 0, 0.12);
+
+                h1 {
+                    color: $neutrals_white;
+                    @include headFour;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                    margin-bottom: 0px;
+                }
+            }
+
+            .planCardSlider {
+                margin-top: 50px;
+
+                .cardPlanBox {
+                    background-color: $neutrals_white;
+                    border-radius: 16px;
+                    // box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.12);
+                    padding: 20px;
+                    display: flex !important;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .planLine {
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        gap: 10px;
+
+                        .left {
+                            width: 50%;
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 21px;
+                            opacity: 0.8;
+                        }
+
+                        .right {
+                            width: 50%;
+                            text-align: right;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            font-size: 14px;
+                            font-weight: 600;
+                            line-height: 21px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

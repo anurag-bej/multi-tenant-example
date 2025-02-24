@@ -1,0 +1,280 @@
+@import "./_variables.scss";
+@import "./_guidlineColor.scss";
+@import "./_guidline.scss";
+@import "./_guidlineMedia.scss";
+
+.our_life_style {
+    width: 100%;
+    height: 100%;
+    background: $primary-blue;
+    position: relative;
+
+    .animation_doodles {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        padding: 50px;
+        left: 0;
+
+        .common_poll {
+            position: absolute;
+
+            &.poly_ani_13 {
+                top: 5%;
+                left: 10%;
+
+                @include mobile-sm-view {
+                    left: 40%;
+                }
+            }
+
+            &.poly_ani_14 {
+                bottom: 20%;
+                left: 5%;
+            }
+
+            &.poly_ani_15 {
+                bottom: 10%;
+                left: 50%;
+
+                @include mobile-xsm-view {
+                    bottom: 20%;
+                }
+            }
+
+
+            #dot_pol {
+                animation: 5.3s blink ease infinite;
+                position: relative;
+                opacity: 0.35;
+
+                &:nth-child(2) {
+                    animation-delay: 2s
+                }
+
+                &:nth-child(3) {
+                    animation-delay: 4s
+                }
+
+                &:nth-child(4) {
+                    animation-delay: 6s
+                }
+
+                &:nth-child(5) {
+                    animation-delay: 9s
+                }
+
+                &:nth-child(6) {
+                    animation-delay: 7s
+                }
+            }
+
+            #dot_pol02 {
+                animation: polly_box 4s ease 3.5s infinite normal none;
+                position: relative;
+            }
+        }
+    }
+
+    .block_inner {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+        max-width: 550px;
+
+        @media (min-width:1920px) {
+            max-width:  28.646vw;
+        }
+
+        .greets {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 20px;
+            opacity: 0.92;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+            color: $neutrals_white;
+
+            @media (min-width:1920px) {
+                font-size: 0.625vw;
+                line-height: 1.042vw;
+            }
+        }
+
+        span {
+            h2 {
+                font-size: 64px;
+                line-height: 72px;
+                position: relative;
+                margin-bottom: 10px;
+                font-weight: 700;
+                color: $neutrals_white;
+
+                @media (min-width:1920px) {
+                    font-size: 3.333vw;
+                    line-height: 3.75vw;
+                }
+
+                @include xsm-laptop-screen {
+                    font-size: 48px;
+                    line-height: 56px;
+                }
+
+                @include mobile-sm-view {
+                    font-size: 32px;
+                    line-height: 40px;
+                }
+
+                &.slog_name {
+                    padding: 0;
+                }
+
+                span {
+                    color: $secondary-yellow;
+                    margin-right: 8px;
+
+                    @media (min-width:1920px) {
+                        margin-right: 0.417vw;
+                    }
+                }
+
+                .txt_doodle {
+                    position: absolute;
+                    bottom: -32px;
+                    left: 10px;
+
+                    @media (min-width:1920px) {
+                        bottom: -1.10vw;
+                        left: 0.521vw;
+                    }
+
+                    @include mobile-sm-view {
+                        max-width: 190px;
+                    }
+
+                    @media screen and (max-height: 650px),
+                    screen and (max-height: 561px) {
+                        max-width: 190px;
+                    }
+
+                    .path {
+                        stroke-miterlimit: 10;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-dasharray: 400;
+                        transition: all 0.8s;
+                        transition: all 2s;
+                    }
+                }
+            }
+        }
+
+        .videobox_wrapper {
+            width: 100%;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 35px;
+
+            @media (min-width:1920px) {
+                margin-top: 1.823vw;
+            }
+
+            @include ipad-view {
+                height: auto;
+                min-height: 300px;
+            }
+
+            @include tab-view {
+                min-height: 250px;
+            }
+
+            @include mobile-view {
+                min-height: auto;
+            }
+
+            .inner_box_wrapper {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                span{
+                    width: 100% !important;
+                    height: 100% !important;
+                    position: relative !important;
+                }
+                picture {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                img {
+                    max-width: 100%;
+                    height: 100%;
+                    width: 100%;
+                    position: relative;
+                }
+            }
+        }
+
+        .video_para_wrapper {
+            position: relative;
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                margin: 25px 0 0;
+                color: $neutrals_white;
+
+                @media (min-width:1920px) {
+                    font-size: 0.833vw;
+                    line-height: 1.25vw;
+                    margin: 1.302vw 0 0;
+                }
+            }
+        }
+    }
+    @include tab-max{
+        height: auto;
+        padding: 80px 24px;
+
+        .block_inner{
+            width: 94%;
+            max-width: 100%;
+
+            span{
+                h1{
+                    font-size: 32px;
+                    line-height: 40px;
+                    margin: 0;
+                    .txt_doodle{
+                        bottom: 0;
+                        max-width: 270px;
+                        position: relative;
+                        left: auto;
+                        display: block;
+                    }
+                }
+            }
+
+            .videobox_wrapper{
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

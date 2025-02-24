@@ -1,0 +1,251 @@
+@import "./_variables.scss";
+
+.block_travel {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(211.81deg, $bg_gradient_one 5.92%, $bg_gradient_two 48.55%, $bg_gradient_three 96.07%);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-size: cover;
+    flex-flow: column;
+
+    @media (min-width:1920px) {
+        padding: 0.781vw;
+    }
+
+    .block_left {
+        width: 100%;
+        height: calc(50% - 7.5px);
+        border-radius: 5px;
+
+        @media (min-width:1920px) {
+            height: calc(50% - 0.391vw);
+        }
+
+        @include tab-view {
+            width: 100%;
+            height: 33.33%;
+        }
+
+        .block_on_hover {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+            transform-style: flat;
+            transform-origin: 50% 50% 0px;
+            transform: translate3d(0px, 0px, 0.01px);
+            transition: 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(153.72deg, $primary-blue -1.28%, rgba(47, 50, 147, 0) 100.96%);
+
+            @include tab-view {
+                display: none;
+            }
+
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            picture {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+            }
+
+            img {
+                width: 100% !important;
+                max-height: 100% !important;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .block_name {
+                width: auto;
+                padding: 0px 15px;
+                font-size: 24px;
+                line-height: 30px;
+                font-weight: 700;
+                color: $white;
+                position: absolute;
+                top: 4%;
+                right: 0;
+
+                @media (min-width:1920px) {
+                    padding: 0px 0.781vw;
+                    font-size: 1.25vw;
+                    line-height: 1.563vw;
+                }
+
+                span {
+                    display: inline;
+                    color: #FEA21A;
+                }
+            }
+        }
+    }
+
+    .block_right {
+        width: 100%;
+        height: calc(50% - 7.5px);
+        display: flex;
+        justify-content: space-between;
+
+        @media (min-width:1920px) {
+            height: calc(50% - 0.391vw);
+        }
+
+        @include tab-view {
+            width: 100%;
+            height: 66.66%;
+        }
+
+        .block_on_hover {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+            transform-style: flat;
+            transform-origin: 50% 50% 0px;
+            transform: translate3d(0px, 0px, 0.01px);
+            transition: 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(153.72deg, $primary-blue -1.28%, rgba(47, 50, 147, 0) 100.96%);
+            text-align: center;
+
+            @include tab-view {
+                display: none;
+            }
+
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            picture {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+            }
+
+            img {
+                width: 100%;
+                max-height: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .block_name {
+                width: auto;
+                padding: 0px 15px;
+                font-size: 24px;
+                line-height: 30px;
+                font-weight: 700;
+                color: $white;
+                position: absolute;
+                top: 4%;
+                right: 0;
+
+                @media (min-width:1920px) {
+                    padding: 0px  0.781vw;
+                    font-size: 1.25vw;
+                    line-height:  1.563vw;
+                }
+
+                span {
+                    display: inline;
+                    color: #FEA21A;
+                }
+            }
+        }
+
+        .block_list {
+            width: calc(50% - 7.5px);
+            @media (min-width:1920px) {
+                width: calc(50% - 0.391vw);
+            }
+        }
+
+    }
+
+    .block_list {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $primary-blue;
+        border-radius: 5px;
+        flex-flow: column;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 15px;
+        text-decoration: none;
+
+        @media (min-width:1920px) {
+           margin-bottom:  0.781vw;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .block_icon{
+            width: 80px;
+            height: 80px;
+
+            @media (min-width:1920px) {
+                width: 4.167vw;
+                height: 4.167vw;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        span {
+            display: block;
+            // margin-top: 15px;
+            font-size: 24px;
+            line-height: 29px;
+            color: $white;
+            letter-spacing: -0.02em;
+            font-weight: 600;
+            text-align: center;
+
+            @media (min-width:1920px) {
+                margin-top:  0.781vw;
+                font-size:  1.25vw;
+                line-height: 1.51vw;
+            }
+        }
+
+        &:hover {
+            background: linear-gradient(153.72deg, $primary-blue -1.28%, rgba(47, 50, 147, 0) 100.96%);
+
+            .block_on_hover {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}

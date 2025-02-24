@@ -11,6 +11,7 @@ import { multiTenantPlugin } from '@payloadcms/plugin-multi-tenant'
 import { isSuperAdmin } from './access/isSuperAdmin'
 import type { Config } from './payload-types'
 import { getUserTenantIDs } from './utilities/getUserTenantIDs'
+import { Media } from './collections/Media'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -20,7 +21,7 @@ export default buildConfig({
   admin: {
     user: 'users',
   },
-  collections: [Pages, Users, Tenants],
+  collections: [Pages, Users, Tenants, Media],
   db: mongooseAdapter({
     url: process.env.DATABASE_URI as string,
   }),

@@ -1,0 +1,149 @@
+@import "./_variables.scss";
+
+.sec_one_right {
+    width: 100%;
+
+    .block_tiles {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+        @include tab-max {
+            height: auto;
+        }
+
+        ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: linear-gradient(211.81deg, $bg_gradient_one 5.92%, $bg_gradient_two 48.55%, $bg_gradient_three 96.07%);
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: relative;
+            top: -5%;
+            transform: rotate(-4deg) scale(1.15);
+            @include tab-max {
+                top: 0;
+                transform: none;
+                height: auto;
+                padding: 15px;
+                gap: 0;
+            }
+            li {
+                width: calc(60% - 10px);
+                height: 38%;
+                border-radius: 5px;
+                position: relative;
+                overflow: hidden;
+
+                @include tab-max{
+                    &.vid_block{
+                        width: 100%;
+                        height: 240px;
+                    }
+                }
+
+                &.half {
+                    width: 18%;
+                }
+
+                &:nth-child(1) {
+                    background: url('https://d1rdz15x9x7c4f.cloudfront.net/assets/payload-images/webpframe3.webp') no-repeat;
+                    background-size: cover;
+                    background-position: center right;
+                }
+
+                &:nth-child(2) {
+                    background: url('https://d1rdz15x9x7c4f.cloudfront.net/assets/payload-images/frame1.webp') no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                &:nth-child(3) {
+                    background: url('https://d1rdz15x9x7c4f.cloudfront.net/assets/payload-images/webpframe4.webp') no-repeat;
+                    background-size: cover;
+                    background-position: center left;
+                }
+
+                &:nth-child(4) {
+                    background: url('https://d1rdz15x9x7c4f.cloudfront.net/assets/payload-images/webpframe7.webp') no-repeat;
+                    background-size: cover;
+                    background-position: center right;
+                }
+
+                &:nth-child(6) {
+                    background: url('https://d1rdz15x9x7c4f.cloudfront.net/assets/payload-images/webpframe4.webp') no-repeat;
+                    background-size: cover;
+                    background-position: center left;
+                }
+
+                &:nth-child(7) {
+                    background: url('https://d1rdz15x9x7c4f.cloudfront.net/assets/payload-images/frame3.webp') no-repeat;
+                    background-size: cover;
+                    background-position: center right;
+                }
+
+                &:nth-child(8) {
+                    background: url('https://d1rdz15x9x7c4f.cloudfront.net/assets/payload-images/webpframe6.webp') no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                &:nth-child(9) {
+                    background: url('https://d1rdz15x9x7c4f.cloudfront.net/assets/payload-images/frame4.webp') no-repeat;
+                    background-size: cover;
+                    background-position: center left;
+                }
+
+                .block_overlay {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: '';
+                    background: rgba(29, 32, 128, 0.6);
+                }
+
+                .block_video_wrapper {
+                    width: 100%;
+                    height: 100%;
+                    @media only screen and (max-width: 1024px) {
+                        max-height: 302px;
+                    }
+                    position: relative;
+                    cursor: pointer;
+                    overflow: hidden;
+                    span{
+                        width: 100% !important;
+                        height: 100% !important;
+                        position: relative !important;
+                        img {
+                            width: 100% !important;
+                            height: 100% !important;
+                            object-fit: cover;
+                            border-radius: 5px;
+                            position: relative !important;
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                    video {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}

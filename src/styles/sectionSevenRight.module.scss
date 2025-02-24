@@ -1,0 +1,85 @@
+@import "./_variables.scss";
+
+.section_seven_right{
+    width: 100%;
+    height: 100%;
+    background: $primary-blue;
+    position: relative;
+
+    @include tab-max{
+        display: none;
+    }
+
+    .block_inner {
+        width: 75%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+        max-width: 400px;
+        padding: 50px;
+
+        @media (min-width:1920px) {
+            max-width: 28.646vw;
+            padding: 80px;
+        }
+        .section_seven_image_block{
+            width: 100%;
+            position: relative;
+            .testimonialsImage_slide{
+                img{
+                    width: 100%;
+                    border-radius: 15px; 
+                }
+            }
+            .testimonials_label{
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                color: $white;
+                letter-spacing: 0.72em;    
+                position: absolute;
+                top: auto;
+                bottom: calc(50% - 90px);
+                right: auto;
+                transform: rotate(-90deg);
+                left: -50%;
+                z-index: 1;
+                text-transform: uppercase;
+
+                @include tab_view{                
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+
+                @media (min-width:1920px){
+                    font-size: 0.625vw;
+                    line-height: 1.042vw;
+                    bottom: 16%;
+                    left: -27%; 
+                }
+                @media (min-width:2220px){
+                    bottom: 14%;
+                    left: -24%;  
+                }
+            }
+        }
+        @include tab-max{
+            width: 80%;
+        }
+    }
+    @include tab-max {
+        height: auto;
+        padding: 0 24px 80px;
+
+        .block_inner {
+            width: 94%;
+            overflow: visible;
+            max-width: 100%;
+        }
+    }
+}

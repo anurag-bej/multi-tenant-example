@@ -2,6 +2,7 @@ import { headers } from 'next/headers'
 import { getPayload } from 'payload'
 import React from 'react'
 import configPromise from '@payload-config'
+import { RenderBlocks } from '../blocks/RenderBlocks'
 
 const fetchData = async (domain: string) => {
   const payload = await getPayload({ config: configPromise })
@@ -15,9 +16,9 @@ const fetchData = async (domain: string) => {
           'tenant.domain': {
             equals: domain,
           },
-          // 'slug': {
-          //   equals: 'home-new'
-          // }
+          'slug': {
+            equals: 'home'
+          }
         },
       ],
     },
@@ -38,6 +39,8 @@ const Page = async () => {
     const domainValue:string = host 
     console.log('domainValue ',domainValue);
   const tenantData = await fetchData(domainValue)
+  const page = tenantData?.docs[0];
+  const { hero, layout } = page
   console.log('tenantData ',tenantData);
   return (
     <div>
@@ -68,6 +71,7 @@ const Page = async () => {
         </a>{' '}
         will show the tenant with the slug "silver".
       </p>
+      <RenderBlocks blocks={layout} />
     </div>
   )
 }

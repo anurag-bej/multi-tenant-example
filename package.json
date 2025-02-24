@@ -19,6 +19,7 @@
     "@payloadcms/db-mongodb": "latest",
     "@payloadcms/next": "latest",
     "@payloadcms/plugin-multi-tenant": "latest",
+    "@payloadcms/plugin-seo": "^3.22.0",
     "@payloadcms/richtext-lexical": "latest",
     "@payloadcms/ui": "latest",
     "cross-env": "^7.0.3",

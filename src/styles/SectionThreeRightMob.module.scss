@@ -1,0 +1,130 @@
+@import "./_variables.scss";
+
+.case_study_main{
+    width: 100%;
+    padding: 40px 0;
+    background: linear-gradient(211.81deg, $bg_gradient_one 5.92%, $bg_gradient_two 48.55%, $bg_gradient_three 96.07%);
+
+    .block_title{
+        width: 100%;
+        display: flex;
+        margin-bottom: 30px;
+        padding: 0 24px;
+        justify-content: space-between;
+        align-items: center;
+        h2{
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.02em;
+            font-weight: 700;
+            color: rgb(255, 255, 255);
+        }
+        a {
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 700;
+            color: rgb(255, 255, 255);
+          }
+    }
+
+    .case_study_slider{
+        width: 97%;
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+
+        .controls {
+            width: calc(100% - 20px);
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            height: 30px;
+            z-index: 9;
+            transform: translateY(-50%);
+            display: none;
+
+            @include tab-view {
+                display: block;
+            }
+
+            .slid_arrows {
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                top: 0;
+                cursor: pointer;
+                border: 0;
+                font-size: 0;
+                border-radius: 50%;
+
+                &.arrows_prev {
+                    left: 0;
+                    background: #2F3293 url(https://d1rdz15x9x7c4f.cloudfront.net/assets/images/icons/ArrowLeft.svg) no-repeat;
+                    background-position: center;
+                }
+
+                &.arrows_next {
+                    right: 0;
+                    background: #2F3293 url(https://d1rdz15x9x7c4f.cloudfront.net/assets/images/icons/ArrowRight.svg) no-repeat;
+                    background-position: center;
+                }
+            }
+
+        }
+
+        .case_study {
+            width: 100%;
+
+            @include tab-view {
+                width: 130%;
+            }
+
+        }
+        .card_case_study{
+            text-align: center;
+            position: relative;
+            padding: 0 10px;
+            .blog_img_wrapper{
+                width: 100%;
+                span{
+                    width: 100% !important;
+                    height: 100% !important;
+                    position: relative !important;
+                    img {
+                        width: 100% !important;
+                        height: 100% !important;
+                        object-fit: cover;
+                        border-radius: 16px;
+                        position: relative !important;
+                    }
+                }
+            }
+            img {
+                display: inline-block;
+                max-width: 100%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+
+            .case_study_name {
+                a {
+                    color: white ;
+                    text-decoration: none;
+                }
+                width: calc(100% - 20px);
+                position: absolute;
+                bottom: 0;
+                left: 10px;
+                background: RGB(47, 50, 147);
+                border-radius: 0 0 5px 5px;
+                text-align: center;
+                padding: 12px;
+                font-size: 16px;
+                line-height: 19px;
+                font-weight: 700;
+                color: rgb(255, 255, 255);
+            }
+        }
+    }
+}

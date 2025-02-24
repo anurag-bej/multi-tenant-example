@@ -1,0 +1,58 @@
+@import "./_variables.scss";
+
+.block_travel{
+    width: 100%;
+    background: $primary-blue;
+    padding-bottom: 12px;
+    ul{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+        li{
+            width: 100%;
+            display: flex;
+            margin: 0 0 12px;
+            padding: 18px 15px;
+            background: linear-gradient(211.81deg, $bg_gradient_one 5.92%, $bg_gradient_two 48.55%, $bg_gradient_three 96.07%);
+            a{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-decoration: none;
+
+                .block_icon{
+                    width: 84px;
+                    height: 84px;
+                    background: $primary-blue;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    svg {
+                        width: 50px;
+                        height: 40px;
+                    }
+                }
+                .block_description {
+                    width: calc(100% - 96px);
+                    span {
+                        font-size: 17px;
+                        line-height: 24px;
+                        font-weight: 700;
+                        margin-bottom: 8px;
+                        color: $white;
+                    }
+                    p {
+                        font-size: 14px;
+                        line-height: 20px;
+                        font-weight: 400;
+                        color: $white;
+                        margin: 0;
+                      }
+                }
+            }
+        }
+    }
+}

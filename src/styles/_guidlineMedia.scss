@@ -1,0 +1,33 @@
+$laptop_view: 1024px;
+$ipad_view: 991px;
+$tab_view: 767px;
+$mobile_view: 575px;
+$mobileStartpoint: 767.9px;
+$mobileEndpoint: 320px;
+
+@mixin  laptop_view {
+    @media (max-width: #{$laptop_view}) {
+        @content;
+    }
+}
+
+@mixin  ipad_view {
+    @media (max-width: #{$ipad_view}) {
+        @content;
+    }
+}
+@mixin  tab_view {
+    @media (max-width: #{$tab_view}) {
+        @content;
+    }
+}
+@mixin  mobile_view {
+    @media (max-width: #{$mobile_view}) {
+        @content;
+    }
+}
+@mixin  mobile_view_min_max {
+    @media (min-width: #{$mobileEndpoint})and (max-width: #{$mobileStartpoint}) {
+        @content;
+    }
+}

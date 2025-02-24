@@ -1,0 +1,126 @@
+@import "./_variables.scss";
+@import "./_guidline.scss";
+@import "./_guidlineColor.scss";
+@import "./_guidlineMedia.scss";
+
+
+.quick_section{
+    padding: 130px 0 118px;
+    position: relative;
+    @include ipad_view{
+        padding: 130px 0 80px;
+    }
+    .quick_title{
+        .banner_title {
+            width: 100%;
+            margin-bottom: 48px;
+            .titletext{
+                @include hero_font;
+                color: $neutrals_white;
+                span {
+                    @include hero_font;
+                    color: $sec_yellow_theme;
+                    text-transform: none;
+                    margin: 0;
+                    opacity: 1;
+                    padding-left: 5px;
+                }
+            }
+            @include tab_view {
+                margin-bottom: 32px;
+            }
+        }
+    }
+    .quicklinks{
+        width: 100%;
+        margin-bottom: 50px;
+        position: relative;
+        z-index: 9;
+        @include ipad_view{
+            margin-bottom: 20px;
+        }
+        .subtitle{
+            width: 100%;
+            display: block;
+            border-bottom: 2px solid $primary_dark_o16;
+            margin-bottom: 30px;
+            h2 {
+                 @include headTwo;
+                 margin: 0;
+                 color: $neutrals_white;
+                 padding-bottom: 20px;
+           }
+           @include ipad_view{
+            margin-bottom: 10px;
+           }
+        }
+        .block_boxs{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            .list_blocks{
+                width: 100%;
+                .list_titles{
+                    @include textMidNormal;
+                    color: $neutrals_white;
+                    padding-bottom: 40px;
+                    display: block;
+                    @include ipad_view{
+                        padding-bottom: 20px;
+                    }
+                    a{
+                        color: $neutrals_white;
+                        text-decoration: none;
+                    }
+                }
+                ul{
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    @include ipad_view{
+                        padding-top: 20px;
+                    }
+                    li{
+                        @include textMidNormal;
+                        position: relative;
+                        padding-left: 30px;
+                        margin-bottom: 30px;
+                        color: $neutrals_white;
+                        width: 33.33%;
+                        vertical-align: top;
+                        display: inline-block;
+                        @include ipad_view{
+                            width: 50%;
+                            margin-bottom: 20px;
+                            padding-bottom: 0px;
+                        }
+                        @include tab-view{
+                            width: 100%;
+                        }
+                        a{
+                            color: $neutrals_white;
+                            text-decoration: none;
+                            transition: all 0.5s;
+                            &:hover{
+                                color: $sec_yellow_theme;
+                            }
+                        }
+                        &:before{
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 50%;
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            transform: translate(0,-50%);
+                            content: '';
+                            background: $sec_yellow_theme;
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+  
+}

@@ -1,0 +1,12 @@
+@import "./_variables.scss";
+.mainMobile_section {
+    display: block;
+    width: 100%;
+    color: $white;
+    overflow-y: auto;
+    position: relative;
+    z-index: 1;
+    // margin-top: 80px;
+    margin-top: 0;
+    padding-top: 80px;
+}

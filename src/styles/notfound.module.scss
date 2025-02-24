@@ -1,0 +1,141 @@
+@import "./_variables.scss";
+@import "./guidlineColor";
+@import "./guidline";
+
+.page_block_404{
+    width: 100%;
+    position: relative;
+    background: $primary_theme;
+    height: 100vh;
+    .animation_doodles {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        padding: 50px;
+        left: 0;
+        @include ipad_view{
+            padding: 15px; 
+        }
+        .common_poll {
+            position: absolute;
+
+            &.poly_ani_68 {
+                top: 20%;
+                right: 0%;
+
+                @include tab_view {
+                    top: 25%;
+                    right: 10px;
+                }
+            }
+            &.poly_ani_69 {
+                bottom: 10%;
+                right: 0;
+
+                @include tab_view {
+                    top: 18%;
+                    left: 10px;
+                }
+            }
+
+            #dot_pol {
+                animation: 5.3s blink ease infinite;
+                position: relative;
+                opacity: 1;
+
+                &:nth-child(2) {
+                    animation-delay: 2s
+                }
+
+                &:nth-child(3) {
+                    animation-delay: 4s
+                }
+
+                &:nth-child(4) {
+                    animation-delay: 6s
+                }
+
+                &:nth-child(5) {
+                    animation-delay: 9s
+                }
+
+                &:nth-child(6) {
+                    animation-delay: 7s
+                }
+            }
+
+            #dot_pol02 {
+                animation: polly_box 4s ease 3.5s infinite normal none;
+                position: relative;
+            }
+        }
+    }
+    .banner_404_content {
+        width: 100%;
+        padding: 110px 0 40px;
+        position: relative;
+        // z-index: 3;
+        text-align: center;
+
+        @include ipad_view{
+            padding: 120px 0 20px;
+        }
+        .banner_title {
+            width: 100%;
+            color: $neutrals_white;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: normal;
+            margin: 0;
+            
+            @include tab_view{
+                font-size: 34px;
+            }
+            @include mobile_view{
+                font-size: 26px;
+            }
+        }
+        .banner_image{
+            img{
+                width: auto;
+                max-width: 100%;
+                max-height: 500px;
+            }
+        }
+        .banner_bottom_content{
+            margin: -200px auto 0;
+
+            @include tab-max{
+                margin: -180px auto 0;
+            }
+            @include tab_view{
+                margin: -160px auto 0;
+            }
+            @include mobile_view{
+                margin: -120px auto 0;
+            }
+
+            .button_block{
+                display: flex;
+                justify-content: center;
+                margin: 0 0 30px;
+                width: 100%;     
+    
+                .theme_btn_solid {
+                    @include buttonSolid;
+                    position: relative;
+                    display: inline-block;
+                    text-decoration: none;
+                    box-shadow: 0 4px 0 $sec_yellow_mid;
+                    margin: 43px 0 0;
+    
+                    @include tab_view{
+                        margin: 25px 0 0;
+                    }
+                }
+            }
+
+        }
+    }
+}
